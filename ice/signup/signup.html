@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Feed Sign Up</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div id="formContainer">
+        <header>
+            <button type="button" id="closeBtn">X</button>
+            <div>
+                <h1>Daily Feed</h1>
+                <h2>Scripture a Day</h2>
+            </div>
+        </header>
+        <main>
+            <h3>Sign Up for Daily Scripture Feed</h3>
+            <form id="myForm">
+                <div class="left">
+                    <section>
+                        <label class="side1" for="username">User Name:</label>
+                        <input class="side2" type="text" id="username" name="username" required>
+                    </section>
+
+                    <section>
+                        <label class="side1" for="password">Password:</label>
+                        <input class="side2" type="password" id="password" name="password" required>
+                    </section>
+
+                    <section>
+                        <label class="side1" for="email">Email:</label>
+                        <input class="side2" type="email" id="email" name="email" required>
+                    </section>
+
+                    <section>
+                        <label class="side1">Gender:</label>
+                        <div class="side2">
+                            <input type="radio" id="male" name="gender" value="male" required>
+                            <label for="male">Male</label>
+                            <input type="radio" id="female" name="gender" value="female" required>
+                            <label for="female">Female</label>
+                        </div>
+                    </section>
+                </div>
+
+                <section>
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Subscribe to newsletter</label>
+                </section>
+
+                <section>
+                    <input type="checkbox" id="conditions" name="conditions" required>
+                    <label for="conditions">I acknowledge the terms and conditions</label>
+                </section>
+                
+                <section>
+                    <button type="submit">Submit</button>
+                </section>
+            </form>
+        </main>
+        
+        <footer>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/ot?lang=eng" target="_blank">
+                <img class="scriptures" id="old" src="images/old_testament.webp" alt="The Old Testament">
+            </a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/nt?lang=eng" target="_blank">
+                <img class="scriptures" src="images/new_testament.webp" alt="The New Testament">
+            </a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm?lang=eng" target="_blank">
+                <img class="scriptures" src="images/book_of_mormon.webp" alt="The Book of Mormon">
+            </a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament?lang=eng" target="_blank">
+                <img class="scriptures" src="images/doctrine_and_covenants.webp" alt="The Doctrine and Covenants">
+            </a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp?lang=eng" target="_blank">
+                <img class="scriptures" id="new" src="images/pearl_of_great_price.webp" alt="The Pearl of Great Price">
+            </a>
+        </footer>
+    </div>
+    
+    <div id="output"></div>
+
+    <script>
+        // Here is some Javascript to start looking forward to wdd131
+        document.getElementById("closeBtn").addEventListener("click", function () {
+            document.getElementById("formContainer").style.display = "none";
+         });
+        const form = document.getElementById('myForm');
+        const output = document.getElementById('output');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Stop form from actually submitting
+
+            const formData = new FormData(form);
+            const entries = [];
+
+            for (const [key, value] of formData.entries()) {
+                if (key == "password") {
+                    entries.push(`<strong>${key}</strong>: ${value} (you should probably encrypt the password)`);
+                } else {
+                    entries.push(`<strong>${key}</strong>: ${value}`);
+                }
+            }
+
+            output.innerHTML = `
+            <br>  
+            <h3>Here is the data that would be sent to the server:</h3>
+            <ul>
+                ${entries.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+            `;
+                });
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+body{
+    background-color: purple;
+}
+#post{
+    max-width: 50%;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 19px;
+}
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 7fr 1fr 1fr;
+    align-items: center;
+}
+.kiwi{
+    grid-column:1/2;
+    text-align: center;
+    font-size: 2.3em;
+}
+.name{
+    grid-column: 2/3;
+    font-size: 22px;
+}
+.time{
+    grid-column: 4/5;
+    text-align: right;
+    color: grey;
+    font-size: 16px;
+}
+.option{
+    grid-column: 5/6;
+    text-align: center;
+}
+main img{
+    max-width: 100%;
+    height: auto;
+}
+footer{
+    display:grid;
+    grid-template-columns: 2fr 2fr 9fr 1fr 1fr;
+    align-items: center;
+    font-size: 1.5em;
+    padding:10px 0 10px 0;
+}
+.share{
+    grid-column: 1/2;
+    text-align: center;
+}
+.likes{
+    grid-column: 4/5;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.heart{
+    grid-column: 5/6;
+    text-align: left;
+}

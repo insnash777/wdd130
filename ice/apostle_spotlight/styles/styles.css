@@ -1,0 +1,75 @@
+body{
+    background-color: #e8eced;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+}
+.container{
+    border: 10px solid black;
+    border-radius: 40px;
+    background-image: url("../images/christus.webp");
+    background-repeat: no-repeat;
+    max-width: 100%;
+    height: auto;
+    margin: 50px;
+    background-position-x: left;
+}
+.presidents{
+    display:grid;
+    grid-template-columns: 1fr .75fr 1fr;
+    margin:0 auto;
+    align-items: flex-end;
+}
+.first img, .second img{
+    justify-items: end;
+    border: 12px solid white;
+    border-radius:100%;
+    width:150px;
+    height:150px;
+}
+.prophet img{
+    border: 13px solid white;
+    border-radius:100%;
+    width:200px;
+    height:200px;
+}
+.first{
+    text-align: right;
+}
+.second{
+    text-align: left;
+}
+.apostles {
+    max-width: 900px;
+    margin:0 auto;
+    margin-left: 282px;
+    justify-items:center;
+}
+.apostles div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 10px;
+    justify-items:end;
+}
+.circle{
+    margin: 10px;
+}
+.circle img{
+    border: 10px solid white;
+    border-radius:100%;
+    width:125px;
+    height:125px;
+}
+img{
+    object-fit: cover;
+    object-position: top;
+}
+.apostles .three{
+    grid-template-columns:1fr 1fr 1fr;
+    justify-items: center;
+    column-gap: 60px;
+    margin-right: 50px;
+}
+.three .circle{
+    display:block;
+}
