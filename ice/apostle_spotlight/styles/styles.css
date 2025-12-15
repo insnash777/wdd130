@@ -27,11 +27,17 @@ body{
     width:150px;
     height:150px;
 }
+.first img:hover, .second img:hover{
+    border: 12px solid chartreuse;
+}
 .prophet img{
     border: 13px solid white;
     border-radius:100%;
     width:200px;
     height:200px;
+}
+.prophet img:hover{
+    border: 13px solid chartreuse;
 }
 .first{
     text-align: right;
@@ -59,6 +65,9 @@ body{
     border-radius:100%;
     width:125px;
     height:125px;
+}
+.circle img:hover{
+    border: 10px solid chartreuse;
 }
 img{
     object-fit: cover;
