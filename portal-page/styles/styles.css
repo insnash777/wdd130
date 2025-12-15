@@ -8,9 +8,9 @@ body{
     border-bottom: 4px solid black;
     padding-top: 4px;
 }
-nav{
+nav{ /*This is monkey programming btw*/
     background-color: #e1a64f;
-    width: 600px;
+    width: 600px; /*bump this by 100px if you want to add another nav item.*/
     height: 102px;
     display: grid;
     grid-template-columns: repeat(6, 100px);
